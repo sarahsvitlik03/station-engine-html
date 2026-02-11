@@ -1,0 +1,56 @@
+{
+    "songs": [
+      {
+        "id": 0,
+        "song": "Echo",
+        "artist": "The Marías",
+        "album": "Submarine",
+        "genre": "Alternative",
+        "releaseData": 2024,
+        "duration": 440,
+        "imageURL": "https://i.scdn.co/image/ab67616d0000b273b19ac38a59cddd80da3cedcb"
+      },
+      {
+
+        "id": 1,
+        "song": "Let the Light In",
+        "artist": "Lana Del Rey",
+        "album": "Did You Know That There’s a Tunnel Under Ocean Blvd",
+        "genre": "Alternative",
+        "releaseData": 2023,
+        "duration": 255,
+        "imageURL": "https://images.genius.com/b3b07a5cec0f41513edc96a84951d6e6.979x979x1.jpg"
+      },
+      {
+        "id": 2,
+        "song": "VOTED OUT",
+        "artist": "Crying City",
+        "album": "VOTED OUT",
+        "genre": "Alternative",
+        "releaseData": 2025,
+        "duration": 230,
+        "imageURL": "https://f4.bcbits.com/img/0036738426_10.jpg"
+      },
+      {
+        "id": 3,
+        "song": "In Violet",
+        "artist": "Searows",
+        "album": "Death in the Business of Whaling",
+        "genre": "Alternative",
+        "releaseData": 2026,
+        "duration": 260,
+        "imageURL": "https://i1.sndcdn.com/artworks-ZDQmieppCzSH-0-t500x500.jpg"
+      },
+      {
+        "id": 4,
+        "song": "Not All Who Wander Are Lost",
+        "artist": "Lana Del Rey",
+        "album": "Chemtrails Over the Country Club",
+        "genre": "Alternative",
+        "releaseData": 2021,
+        "duration": 270,
+        "imageURL": "https://i.redd.it/xudbhcixqra61.png"
+      }
+    ]
+  }
+  

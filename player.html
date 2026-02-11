@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  </head>
+  <body> 
+    <footer>
+      <!-- Below is the bottom music bar at the bottom of each page -->
+      <audio id="audioPlayer" src="Echo.mp3"></audio>
+
+        <div id="music-bar">
+          <div id="music-icon">
+             <img id="artwork" alt="music-icon">
+          </div>
+          <div id="music-title">
+            <a id="track" href="media-player.html"></a>
+            <div id="artist"></div>
+          </div>
+          <div id="progress-bar">
+           <div id="circle">
+             <i class="fas fa-circle"></i>
+          </div>
+          <div id="play-buttons">
+            <i id="playIcon" class="fas fa-play-circle"></i>
+          </div> 
+          </div>
+          <div id="thumbs-up-and-down">
+            <!-- Below replaces the clicked thumbs up or down with a filled or unfilled one after pressing -->
+            <i id="thumbUp" class="far fa-thumbs-up"
+               onclick="
+                 this.classList.replace('far', 'fas');
+                 document.getElementById('thumbDown').classList.replace('fas', 'far');">
+            </i>
+            <i id="thumbDown" class="far fa-thumbs-down"
+               onclick="
+                 this.classList.replace('far', 'fas');
+                document.getElementById('thumbUp').classList.replace('fas', 'far');">
+            </i>
+          </div>
+          </div>
+        </div>
+      </footer>
+      <script src="script.js"></script>
+  </body>
+</html>

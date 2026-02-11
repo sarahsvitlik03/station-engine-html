@@ -1,0 +1,304 @@
+
+.sidenav {
+    height: 100%;
+    position: fixed;
+    width: 350px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.40); 
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .nav-header {
+    display: flex;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    color: white;
+  }
+
+  .login-link {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: 0.5s;
+  }
+  
+  .nav-link {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: 0.5s;
+    font-size: 22px
+  }
+
+  .sidenav a:hover {
+    color: #aa0000;
+  }
+
+  body {
+    font-family: "Zalando Sans Expanded", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;    margin: 0;
+    overflow-x: hidden;
+    background-image: url("background.png"); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    color:white
+}
+
+#music-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: rgba(242, 111, 111, 0.25);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  color: white;
+  z-index: 100;
+  backdrop-filter: blur(6px);  
+}
+.next-song { 
+  width: 100%; 
+  height: 160px; 
+  background: rgba(0, 0, 0, 0.25); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
+  display: flex; 
+  align-items: center; 
+  padding: 15px; 
+  box-sizing: border-box; 
+  color: white; gap: 15px; 
+}
+
+.queued-wrapper { 
+  position: fixed; 
+  font-size: 17px;
+  bottom: 110px;  
+  padding-bottom: 40px;
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 60%; 
+  isplay: flex; 
+  flex-direction: column; 
+  z-index: 9999; 
+}
+
+#wnhu-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#wnhu-logo img {
+  width: 275px;
+  height: 225px;
+  padding-right: 20px;
+  padding-top: 30px;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: logoFadeUp 1.2s ease-out forwards;
+}
+
+
+#wnhu-logo-2 img {
+  width: 350px;
+  height: 320px;
+  padding-right: 20px;
+  padding-top: 60px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: logoFadeUp 1.2s ease-out forwards;
+}
+
+@keyframes logoFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#next-song-icon img{
+  width: 100px;
+  padding-right: 20px;
+  height: 100px;
+  object-fit: cover;
+  
+}
+
+#music-icon img {
+  width: 90px;
+  padding-right: 20px;
+  padding-left: 20px;
+  height: 90px;
+  object-fit: cover;
+}
+
+#music-title {
+  margin-left: 15px;
+  color: #e0e0e0;
+}
+
+#music-title #song, a{
+  cursor: pointer;
+  color: #e0e0e0;
+  text-decoration: none;
+}
+
+#music-title a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.2rem;
+}
+
+#music-title a:hover {
+  color: #a80404;
+  transition: 0.5s;
+}
+
+
+#music-title #artist {
+  font-size: 1rem;
+}
+
+#progress-bar {
+  flex: 1;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 0 20px;
+  border-radius: 2px;
+  position: relative;
+}
+
+#circle {
+  position: absolute;
+  top: -6px;
+  left: 0;
+  color: white;
+  font-size: 0.7rem;
+}
+#play-buttons {
+  font-size: 3rem;
+  color: white;
+  padding-top: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;  
+  align-items: center;  
+  }
+
+ #play-buttons.paused {
+  font-size: 3rem;
+  color: white;
+  padding-top: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;  
+  align-items: center;     
+ }
+
+ #thumbs-up-and-down {
+  cursor: pointer;
+  padding-right: 20px;
+  font-size: 1.7rem;
+}
+
+#globe {
+  cursor: pointer;
+  padding-right: 20px;
+  font-size: 1.7rem;
+}
+
+#bruce img {
+  width: 50%;
+  height: 80%;
+  max-width: 500px;
+  height: auto; 
+  border-radius: 8px; 
+}
+
+.back-button {
+  font-size:  20px;
+  padding-left: 40px;
+  padding-top: 40px;
+}
+
+.back-button :hover{
+  color: #a80404;
+  transition: 0.5s;
+}
+
+
+.page-content { 
+  margin-left: 300px;
+  padding: 20px;
+  text-align: center; 
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+ }
+
+.web-header {
+  padding-bottom: 20px;
+}
+
+.info {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.6;
+  font-size: 16px;
+  padding: 40px 50px;
+  border-radius: 12px;
+  font-size: 17px;
+  backdrop-filter: blur(6px);
+  background-color: rgba(208, 21, 21, 0.214); 
+}
+
+
+@media (max-width: 600px) {
+  #music-bar {
+      height: 70px;
+      padding: 0 10px;
+  }
+
+  #music-icon img {
+      width: 45px;
+      height: 45px;
+  }
+
+  #music-title {
+      font-size: 0.8rem;
+      margin-left: 10px;
+  }
+
+
+  #progress-bar {
+      margin: 0 10px;
+  }
+
+  #play-buttons {
+      font-size: 1.5rem;
+  }
+
+
+}
