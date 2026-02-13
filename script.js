@@ -90,7 +90,7 @@ const msalConfig = {
   auth: {
     clientId: "dfbed61f-e736-4e3f-8d4a-6a31e1c959ef",
     authority: "https://login.microsoftonline.com/common",
-    redirectUri: "http://localhost:5500/wnhu-public/login.html"
+    redirectUri: "http://localhost:5500/login.html"
   },
   cache: {
     cacheLocation: "localStorage",  
@@ -128,10 +128,10 @@ async function initializeMsal() {
       .then(result => { 
         window.location.href = "/show.html";
       if (result === "new") {
-        // go to the setup profile page
+        window.location.href = "profile-setup.html";
       }
       else if (result === "exists") {
-        window.location.href = "/wnhu-public/index.html";
+        window.location.href = "index.html";
       }
     });
     } else {
