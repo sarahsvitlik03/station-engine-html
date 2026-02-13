@@ -3,6 +3,7 @@
     height: 100%;
     position: fixed;
     width: 350px;
+    max-width: 80vw;
     z-index: 1;
     top: 0;
     left: 0;
@@ -121,7 +122,16 @@
   width: 350px;
   height: 320px;
   padding-right: 20px;
-  padding-top: 60px;
+  padding-top: 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: logoFadeUp 1.2s ease-out forwards;
+}
+
+#wnhu-logo-3 img {
+  width: 320px;
+  height: 250px;
+  padding-right: 20px;
   opacity: 0;
   transform: translateY(20px);
   animation: logoFadeUp 1.2s ease-out forwards;
@@ -244,9 +254,28 @@
   transition: 0.5s;
 }
 
+.profile-content { 
+  padding-top: 10%;
+  text-align: center; 
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+ }
+
+ #profile-setup { 
+  flex-direction: column; 
+  gap: 25px; 
+  width: 100%; 
+  max-width: 450px; 
+  margin: 0 auto; 
+}
 
 .page-content { 
-  margin-left: 300px;
+  margin-left: 350px;
   padding: 20px;
   text-align: center; 
   font-family: "Zalando Sans Expanded", sans-serif;
@@ -257,8 +286,51 @@
   align-items: center;
  }
 
+ #student {
+  width: 100%; 
+  padding: 14px 18px; 
+  border-radius: 12px; 
+  border: none; 
+  background: rgba(255, 255, 255, 0.15); 
+  backdrop-filter: blur(6px); 
+  color: #e0e0e0;    
+  display: flex;
+  font-size: 16px; 
+  font-family: "Zalando Sans Expanded", sans-serif;
+  margin-bottom: 10px; 
+  box-sizing: border-box;
+ }
+
+ #gender, #age, #submit {
+  width: 100%; 
+  padding: 14px 18px; 
+  border-radius: 12px; 
+  border: none; 
+  background: rgba(255, 255, 255, 0.15);
+  font-family: "Zalando Sans Expanded", sans-serif; 
+  backdrop-filter: blur(6px); 
+  color: #e0e0e0;    
+  font-size: 16px; 
+  margin-bottom: 10px; 
+  box-sizing: border-box;
+ }
+
+.input-box { 
+  width: 100%; 
+  padding: 14px 18px; 
+  border-radius: 12px; 
+  font-family: "Zalando Sans Expanded", sans-serif;
+  border: none; 
+  background: rgba(255, 255, 255, 0.15); 
+  backdrop-filter: blur(6px); 
+  color: #e0e0e0;    
+  font-size: 16px; 
+  margin-bottom: 10px; 
+  box-sizing: border-box;
+}
+
 .web-header {
-  padding-bottom: 20px;
+  padding-bottom: 5px;
 }
 
 .info {

@@ -11,6 +11,46 @@
     <link href="https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
   </head>
   <body> 
-      <script src="script.js"></script>
+
+    <div class = "profile-content"> 
+
+      <div id="wnhu-logo-3">
+        <img src="wnhu.png">
+      </div>
+
+      <div class = "web-header">
+        <h2> Complete Your Profile </h2>
+      </div>
+
+    <form id="profile-setup" action="http://127.0.0.1:3000/createUser" method="POST">
+      <div id="name">  
+      <input type="text" id="fname" name="first" placeholder="First Name"  class="input-box">
+      <input type="text" id="lname" name="last" placeholder="Last Name"  class="input-box">
+    </div>
+      <div id="student"> 
+        <span>UNH Student</span> 
+        <label class="switch"> 
+          <input type="checkbox" name="isUNHStudent"> 
+          <span class="slider"></span> 
+      </label> </div>
+
+      <select name="gender" id="gender"> 
+        <option value="">Gender</option> 
+        <option value="Male">Male</option> 
+        <option value="Rather not say">Female</option> 
+        <option value="Other">Other</option> 
+        <option value="Rather not say">Rather not say</option> 
+      </select>
+      <input id="age" type="number" name="age" min="1" max="120" placeholder="Age">
+      <input type="hidden" name="dateCreated" id="dateCreated">
+      <input type="hidden" name="mobile_or_stationengine" value="0">
+
+      <input id="submit" type="submit" value="Submit">
+    </form>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      document.getElementById("dateCreated").value = new Date().toISOString();
+    </script>    
   </body>
 </html>
