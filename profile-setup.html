@@ -24,8 +24,10 @@
 
     <form id="profile-setup" action="http://127.0.0.1:3000/createUser" method="POST">
       <div id="name">  
-      <input type="text" id="fname" name="first" placeholder="First Name"  class="input-box">
-      <input type="text" id="lname" name="last" placeholder="Last Name"  class="input-box">
+        <input type="text" id="fname" name="first" placeholder="First Name"  class="input-box">
+        <input type="text" id="lname" name="last" placeholder="Last Name"  class="input-box">
+        <input type="hidden" name="email" id="email">
+
     </div>
       <div id="student"> 
         <span>UNH Student</span> 
@@ -37,8 +39,7 @@
       <select name="gender" id="gender"> 
         <option value="">Gender</option> 
         <option value="Male">Male</option> 
-        <option value="Rather not say">Female</option> 
-        <option value="Other">Other</option> 
+        <option value="Female">Female</option> 
         <option value="Rather not say">Rather not say</option> 
       </select>
       <input id="age" type="number" name="age" min="1" max="120" placeholder="Age">
@@ -50,7 +51,25 @@
     </div>
     <script src="script.js"></script>
     <script>
+      document.getElementById("email").value = localStorage.getItem("email");
       document.getElementById("dateCreated").value = new Date().toISOString();
-    </script>    
-  </body>
+      document.getElementById("profile-setup").addEventListener("submit", async (e) => {
+      e.preventDefault(); // stop normal navigation
+
+      const formData = new FormData(e.target);
+
+      // send to Flask
+     const res = await fetch("http://127.0.0.1:3000/createUser", {
+     method: "POST",
+     body: formData
+     });
+
+    const text = await res.text();
+
+    if (text === "created") {
+      window.location.href = "http://127.0.0.1:5500/index.html";
+    }
+    });
+  </script>    
+ </body>
 </html>

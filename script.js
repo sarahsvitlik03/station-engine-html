@@ -115,7 +115,10 @@ async function initializeMsal() {
 
       // Build User
       const account = response.account;
+
+      // Store email in local storage if we need to setup on profile page
       const userEmail = account.username;
+      localStorage.setItem("email", userEmail);
 
       fetch ("http://127.0.0.1:3000/checkUser", {
         method: "POST",
@@ -167,7 +170,6 @@ async function signIn() {
  /* 
 Other things to do: 
 
-// Create a profile setup page -> Send to MySQL to create user 
 // Fix issue where on Safari you have to login in twice to redirect
 // Make a route for the admin to create a user (ermm i think)
 // Work out the flow and any other bugs 
